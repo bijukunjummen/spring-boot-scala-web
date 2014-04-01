@@ -27,6 +27,7 @@ repositories {
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
     compile("org.springframework.boot:spring-boot-starter-data-jpa")
+    compile("org.springframework.boot:spring-boot-starter-actuator")
     compile("org.thymeleaf:thymeleaf-spring4")
     testCompile("org.springframework.boot:spring-boot-starter-test")
     compile("org.hsqldb:hsqldb")
