@@ -1,51 +1,53 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" layout:decorator="layout/sitelayout">
 <head>
 <title th:text="#{app.name}">List of Hotels</title>
-<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" href="../../static/css/bootstrap.min.css" />
-<link rel="stylesheet" th:href="@{/css/bootstrap-theme.css}" href="../../static/css/bootstrap-theme.css" />
+<link rel="stylesheet" th:href="@{/webjars/bootstrap/3.1.1/css/bootstrap.min.css}" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
+<link rel="stylesheet" th:href="@{/webjars/bootstrap/3.1.1/css/bootstrap-theme.css}" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.css" />
 <link rel="stylesheet" th:href="@{/css/application.css}" href="../../static/css/application.css" />
 </head>
 <body>
-	<div class="container">
+	<div class="container-fluid">
 		<div class="row">
 			<div class="col-xs-12">
 				<h1 class="well well-small">Hotels</h1>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-xs-12">
-				<form action="#" th:action="@{/hotels/update}" method="post" th:object="${hotel}" class="form-horizontal">
-					<input type="hidden" th:field="*{id}"/>
-					<div class="form-group">
-						<label for="name" class="col-xs-2">Name</label>
-						<div class="col-xs-6">
-							<input class="form-control" placeholder="Name" th:field="*{name}"/>
+		<div layout:fragment="content">		
+			<div class="row">
+				<div class="col-xs-12">
+					<form action="#" th:action="@{/hotels/update}" method="post" th:object="${hotel}" class="form-horizontal">
+						<input type="hidden" th:field="*{id}"/>
+						<div class="form-group">
+							<label for="name" class="col-xs-2">Name</label>
+							<div class="col-xs-6">
+								<input class="form-control" placeholder="Name" th:field="*{name}"/>
+							</div>
+							<div class="col-xs-4">
+								<p class="text-warning" th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Error with Name</p>
+							</div>						
 						</div>
-						<div class="col-xs-4">
-							<p class="text-warning" th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Error with Name</p>
-						</div>						
-					</div>
-					<div class="form-group">
-						<label for="address" class="col-xs-2">Address</label>
-						<div class="col-xs-6">
-							<input class="form-control" placeholder="Address" th:field="*{address}"/>
-						</div>
-						<div class="col-xs-4">
-							<p class="text-warning" th:if="${#fields.hasErrors('address')}" th:errors="*{address}">Error with Address</p>
-						</div>						
-					</div>		
-					<div class="form-group">
-						<label for="zip" class="col-xs-2">Zip</label>
-						<div class="col-xs-6">
-							<input class="form-control" placeholder="Zip" th:field="*{zip}"/>
-						</div>
-						<div class="col-xs-4">
-							<p class="text-warning" th:if="${#fields.hasErrors('zip')}" th:errors="*{zip}">Error with Zip</p>
-						</div>						
-					</div>	
-					<button type="submit" class="btn btn-default">Submit</button>							
-				</form>
+						<div class="form-group">
+							<label for="address" class="col-xs-2">Address</label>
+							<div class="col-xs-6">
+								<input class="form-control" placeholder="Address" th:field="*{address}"/>
+							</div>
+							<div class="col-xs-4">
+								<p class="text-warning" th:if="${#fields.hasErrors('address')}" th:errors="*{address}">Error with Address</p>
+							</div>						
+						</div>		
+						<div class="form-group">
+							<label for="zip" class="col-xs-2">Zip</label>
+							<div class="col-xs-6">
+								<input class="form-control" placeholder="Zip" th:field="*{zip}"/>
+							</div>
+							<div class="col-xs-4">
+								<p class="text-warning" th:if="${#fields.hasErrors('zip')}" th:errors="*{zip}">Error with Zip</p>
+							</div>						
+						</div>	
+						<button type="submit" class="btn btn-default">Submit</button>							
+					</form>
+				</div>
 			</div>
 		</div>
 	</div>
