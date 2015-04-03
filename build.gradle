@@ -6,7 +6,7 @@ buildscript {
 	    mavenLocal()
     }
     dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.0.0.RELEASE")
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.2.3.RELEASE")
     }
 }
 
@@ -37,11 +37,11 @@ dependencies {
     compile("org.hibernate:hibernate-validator")
     testCompile("org.springframework.boot:spring-boot-starter-test")
     compile("org.hsqldb:hsqldb")
-    compile("org.scala-lang:scala-library:2.10.4")
+    compile("org.scala-lang:scala-library:2.11.5")
     compile("org.webjars:bootstrap:3.1.1")
     testCompile("junit:junit")
 }
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '1.11'
+    gradleVersion = '2.3'
 }
