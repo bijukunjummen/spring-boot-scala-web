@@ -20,4 +20,8 @@ Start up the sbt console using `sbt`
 Run the Spring boot main program using `runMain mvctest.SampleWebApplication`
 
 
+Using sbt-revolver for development:
+-----------------------------------
+
+Restart Tomcat container after each change in code `~reStart`
 

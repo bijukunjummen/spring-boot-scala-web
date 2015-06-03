@@ -8,6 +8,8 @@ sbtVersion := "0.13.1"
 
 seq(webSettings : _*)
 
+Revolver.settings
+
 libraryDependencies ++= Seq(
   "org.springframework.boot" % "spring-boot-starter-web" % "1.2.3.RELEASE",
   "org.springframework.boot" % "spring-boot-starter-data-jpa" % "1.2.3.RELEASE",
