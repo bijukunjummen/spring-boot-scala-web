@@ -7,8 +7,4 @@ import org.springframework.context.annotation.ComponentScan
 @Configuration
 @EnableAutoConfiguration
 @ComponentScan
-class SampleConfig {
-  def conversionService = {
-
-  }
-}
+class SampleConfig
