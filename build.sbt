@@ -26,5 +26,3 @@ libraryDependencies ++= Seq(
   "org.apache.tomcat.embed" % "tomcat-embed-logging-juli" % "8.0.30" % "container",
   "org.apache.tomcat.embed" % "tomcat-embed-jasper"       % "8.0.30" % "container"
 )
-
-

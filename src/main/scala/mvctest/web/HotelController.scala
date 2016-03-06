@@ -1,15 +1,15 @@
 package mvctest.web
 
-import org.springframework.web.bind.ServletRequestDataBinder
-import org.springframework.web.bind.annotation.{ResponseBody, RequestMapping, PathVariable, RequestMethod}
-import org.springframework.stereotype.Controller
+import java.lang.Long
+import javax.validation.Valid
+
+import mvctest.domain.Hotel
 import mvctest.service.HotelRepository
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.stereotype.Controller
 import org.springframework.ui.Model
-import java.lang.Long
-import mvctest.domain.Hotel
 import org.springframework.validation.BindingResult
-import javax.validation.Valid
+import org.springframework.web.bind.annotation.{PathVariable, RequestMapping, RequestMethod}
 
 @Controller
 @RequestMapping(Array("/hotels"))
