@@ -8,6 +8,8 @@ sbtVersion := "0.13.9"
 
 enablePlugins(TomcatPlugin)
 
+Revolver.settings
+
 libraryDependencies ++= Seq(
   "org.springframework.boot" % "spring-boot-starter-web" % "1.3.2.RELEASE",
   "org.springframework.boot" % "spring-boot-starter-data-jpa" % "1.3.2.RELEASE",
