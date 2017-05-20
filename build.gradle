@@ -1,5 +1,5 @@
 plugins {
-    id 'org.springframework.boot' version '1.4.4.RELEASE'
+    id 'org.springframework.boot' version '1.5.3.RELEASE'
 }
 
 apply plugin: 'java'
@@ -15,7 +15,7 @@ ext {
 
 jar {
     baseName = 'spring-boot-scala-web'
-    version =  '0.2.1'
+    version =  '0.3.0'
 }
 
 repositories {
@@ -37,4 +37,3 @@ dependencies {
     compile("org.webjars:bootstrap:3.1.1")
     testCompile("junit:junit")
 }
-

@@ -4,26 +4,17 @@ import javax.persistence.Id
 import javax.persistence.GeneratedValue
 import java.lang.Long
 import javax.persistence.Entity
+
 import scala.beans.BeanProperty
 import org.hibernate.validator.constraints.NotEmpty
 
+import scala.annotation.meta.field
+
 @Entity
-class Hotel {
+class Hotel(@(Id @field) @(GeneratedValue @field) @BeanProperty var id: Long,
+            @BeanProperty @(NotEmpty @field) var name: String,
+            @BeanProperty @(NotEmpty @field) var address: String,
+            @BeanProperty @(NotEmpty @field) var zip: String) {
 
-  @Id
-  @GeneratedValue
-  @BeanProperty
-  var id: Long = _
-
-  @BeanProperty
-  @NotEmpty
-  var name: String = _
-
-  @BeanProperty
-  @NotEmpty
-  var address: String = _
-
-  @BeanProperty
-  @NotEmpty
-  var zip: String = _
+  def this() = this(null, null, null, null)
 }

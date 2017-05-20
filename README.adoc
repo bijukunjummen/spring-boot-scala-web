@@ -7,15 +7,6 @@ A sample web application using spring-boot and Scala
 Build using `./gradlew build`
 Run using `./gradlew bootRun`
 OR
-Run using: `java -jar build/libs/spring-boot-scala-web-0.2.0.jar`
+Run using: `java -jar build/libs/spring-boot-scala-web-0.3.0.jar`
 
 A url listing the hotels is at http://localhost:8080/hotels[http://localhost:8080/hotels]
-
-
-=== Using sbt as the build tool:
-
-Start up the sbt console using `sbt`
-Run the Spring boot main program using `runMain mvctest.SampleWebApplication`
-
-
-
