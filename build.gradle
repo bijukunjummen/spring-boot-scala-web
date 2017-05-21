@@ -33,6 +33,6 @@ dependencies {
 //    compile("org.hibernate:hibernate-validator")
     testCompile("org.springframework.boot:spring-boot-starter-test")
     compile("com.h2database:h2")
-    compile("org.scala-lang:scala-library:2.12.1")
+    compile("org.scala-lang:scala-library:2.12.2")
     compile("org.webjars:bootstrap:3.1.1")
 }
