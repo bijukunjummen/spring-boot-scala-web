@@ -35,24 +35,24 @@ class HotelController @Autowired()(private val hotelRepository: HotelRepository)
   }
 
   @PostMapping
-  def create(@Valid hotel: Hotel, bindingResult: BindingResult) = {
+  def create(@Valid hotel: Hotel, bindingResult: BindingResult) =
     if (bindingResult.hasErrors()) {
       "hotels/create"
     } else {
       hotelRepository.save(hotel)
       "redirect:/hotels"
     }
-  }
+
 
   @PostMapping(value = Array("/update"))
-  def update(@Valid hotel: Hotel, bindingResult: BindingResult) = {
+  def update(@Valid hotel: Hotel, bindingResult: BindingResult) =
     if (bindingResult.hasErrors()) {
       "hotels/edit"
     } else {
       hotelRepository.save(hotel)
       "redirect:/hotels"
     }
-  }
+
 
   @GetMapping(value = Array("/delete/{id}"))
   def delete(@PathVariable("id") id: Long) = {
