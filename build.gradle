@@ -32,8 +32,7 @@ dependencies {
     compile("nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect")
 //    compile("org.hibernate:hibernate-validator")
     testCompile("org.springframework.boot:spring-boot-starter-test")
-    compile("org.hsqldb:hsqldb")
+    compile("com.h2database:h2")
     compile("org.scala-lang:scala-library:2.12.1")
     compile("org.webjars:bootstrap:3.1.1")
-    testCompile("junit:junit")
 }
