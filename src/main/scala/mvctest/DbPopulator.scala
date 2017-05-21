@@ -13,9 +13,8 @@ import org.springframework.stereotype.Component
 @Component
 class DbPopulator @Autowired()(val hotelRepository: HotelRepository) extends CommandLineRunner {
   override def run(args: String*): Unit = {
-    hotelRepository.save(new Hotel(null, "Hotel 1", "Address 1", "Zip 1"))
-    hotelRepository.save(new Hotel(null, "Hotel 2", "Address 2", "Zip 2"))
-    hotelRepository.save(new Hotel(null, "Hotel 3", "Address 3", "Zip 3"))
-    hotelRepository.save(new Hotel(null, "Hotel 4", "Address 4", "Zip 4"))
+    (1 to 10).foreach(i => {
+      hotelRepository.save(new Hotel(id=null, name = s"Hotel $i", address = s"Address $i", zip = s"Zip $i"))  
+    })
   }
 }
