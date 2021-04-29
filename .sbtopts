@@ -1,0 +1,2 @@
+-J-agentpath:distr/drill_agent.dll=drillInstallationDir=distr/,adminAddress=localhost:8090,agentId=ScalaSpring,buildVersion=0.1.0,logLevel=TRACE
+

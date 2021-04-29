@@ -1,28 +1,30 @@
 = spring-boot-scala-web
 A sample web application using spring-boot and Scala
 
+It is forked from https://github.com/bijukunjummen/spring-boot-scala-web
+to demonstrate integration with Drill4J
 
-=== Using gradle as the build tool:
+== How to run
 
-Build using `./gradlew build`
-Run using `./gradlew bootRun`
-OR
-Run using: `java -jar build/libs/spring-boot-scala-web-0.3.0.jar`
+=== common steps
+. take from artifactory stable version windows: https://oss.jfrog.org/artifactory/oss-release-local/com/epam/drill/drill-agent-mingwX64/
+or linux https://oss.jfrog.org/artifactory/oss-release-local/com/epam/drill/drill-agent-linuxX64/
+. unzip it to 'distr' folder
+. run Drill4j admin
+.. TODO
 
-A url listing the hotels is at http://localhost:8080/hotels[http://localhost:8080/hotels]
+=== sbt
 
-=== Using sbt as the build tool
+. in '.sbtops' change if it needs:
+.. adminAddress=localhost:8090
+.. agentId=ScalaSpring
+.. buildVersion=0.1.0
+. sbt run
+. open http://localhost:8080/hotels
 
-Start up sbt console
+=== gradle
 
-[source, bash]
-----
-sbt
-----
+todo
 
-Start App
-
-[source, bash]
-----
-~re-start
-----
+=== register agent
+. use 'mvctest' in Project Package(s)
